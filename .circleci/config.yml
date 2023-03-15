@@ -10,8 +10,8 @@ jobs:
 
       - restore_cache:
           key:
-            - maven-cache-{{ checksum "pom.xml" }}
-            - maven-cache-
+          - maven-cache-{{ checksum "pom.xml" }}
+          - maven-cache-
 
       - run:
           name: "install dependencies"
