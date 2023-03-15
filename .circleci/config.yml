@@ -9,11 +9,8 @@ jobs:
       - checkout
 
       - run:
-          name: "testing 1"
-          command: |
-            maven -v
-            java -v
-            ls
-            pwd
-            whoami
+          name: "install dependencies"
+          command: mvn install
+
+
 
