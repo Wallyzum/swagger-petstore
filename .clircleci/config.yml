@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: okteto/maven:latest
+    working_directory: ~/swagger-petstore
+    steps:
+      - checkout
+
+      - run:
+          name: "testing 1"
+          command: |
+            maven -v
+            java -v
+            ls
+            pwd
+            whoami
+
