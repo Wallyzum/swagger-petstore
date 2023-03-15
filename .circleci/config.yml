@@ -34,8 +34,8 @@ jobs:
       - checkout
 
       - run:
-        name: "test"
-        command: echo "Hello World"
+          name: "test"
+          command: echo "Hello World"
 
 
 
