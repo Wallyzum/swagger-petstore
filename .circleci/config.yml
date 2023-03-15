@@ -27,3 +27,29 @@ jobs:
           command: mvn package jetty:run
 
 
+  test1:
+    docker:
+      - image: okteto/maven:latest
+    step:
+      - checkout
+
+  test2:
+    docker:
+      - image: okteto/maven:latest
+    step:
+      - checkout
+
+  test3:
+    docker:
+      - image: okteto/maven:latest
+    step:
+      - checkout
+
+  test4:
+    docker:
+      - image: okteto/maven:latest
+    step:
+      - checkout
+
+
+
