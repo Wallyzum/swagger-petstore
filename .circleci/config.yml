@@ -9,7 +9,7 @@ jobs:
       - checkout
 
       - restore_cache:
-          key:
+          keys:
           - maven-cache-{{ checksum "pom.xml" }}
           - maven-cache-
 
@@ -20,6 +20,6 @@ jobs:
       - save_cache:
           paths:
             ~/.m2/repository
-          key: maven-cache-{{ checksum "pom.xml" }}
+          keys: maven-cache-{{ checksum "pom.xml" }}
 
 
