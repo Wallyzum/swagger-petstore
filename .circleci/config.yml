@@ -30,7 +30,7 @@ jobs:
   test1:
     docker:
       - image: okteto/maven:latest
-    step:
+    steps:
       - checkout
 
       - run:
