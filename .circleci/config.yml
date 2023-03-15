@@ -37,6 +37,26 @@ jobs:
           name: "test"
           command: echo "Hello World"
 
+  test2:
+    docker:
+      - image: okteto/maven:latest
+    steps:
+      - checkout
+
+      - run:
+          name: "test"
+          command: echo "Hello World"
+
+  test3:
+    docker:
+      - image: okteto/maven:latest
+    steps:
+      - checkout
+
+      - run:
+          name: "test"
+          command: echo "Hello World"
+
 
 
 
@@ -49,6 +69,8 @@ workflows:
       - test1:
           requires:
             - build
+      - test2
+      - test3
 
 
 
