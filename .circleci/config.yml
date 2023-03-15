@@ -22,4 +22,8 @@ jobs:
             ~/.m2/repository
           key: maven-cache-{{ checksum "pom.xml" }}
 
+      - run:
+          name: "deploy API"
+          command: mvn package jetty:run
+
 
