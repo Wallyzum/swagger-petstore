@@ -41,7 +41,7 @@ jobs:
 
 
 
-workflow:
+workflows:
   version: 2
   workShopCI:
     jobs:
