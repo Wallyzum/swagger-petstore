@@ -33,11 +33,19 @@ jobs:
     step:
       - checkout
 
+    run:
+      name: "test"
+      command: echo "Hello World"
+
   test2:
     docker:
       - image: okteto/maven:latest
     step:
       - checkout
+
+    run:
+      name: "test"
+      command: echo "Hello World"
 
   test3:
     docker:
@@ -45,11 +53,33 @@ jobs:
     step:
       - checkout
 
+
+    run:
+      name: "test"
+      command: echo "Hello World"
+
   test4:
     docker:
       - image: okteto/maven:latest
     step:
       - checkout
 
+
+    run:
+      name: "test"
+      command: echo "Hello World"
+
+
+workflow:
+  version: 2
+  workShopCI:
+    jobs:
+      - build
+      - test4:
+          requires:
+            - build
+      - test1:
+          requires:
+            - test4
 
 
